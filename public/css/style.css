@@ -718,7 +718,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: linear-gradient(
     rgba(255, 255, 255, 0.5),
       rgba(168, 168, 168, 0.7)  /* rgba(133, 27, 143, 0.3),
-      rgba(168, 168, 168, 0.7)*/), url(../img/sts4.JPG) fixed center center;
+      rgba(168, 168, 168, 0.7)*/), url(../img/sts4.jpg) fixed center center;
   background-size: cover;
   padding: 80px 0 60px 0;
   width: 100%;
