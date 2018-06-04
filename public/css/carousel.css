@@ -1,0 +1,39 @@
+#hero-carousel .carousel-fade .carousel-inner .item {
+  transition-property: opacity;
+}
+#hero-carousel .carousel-fade .carousel-inner .item,
+#hero-carousel .carousel-fade .carousel-inner .active.left,
+#hero-carousel .carousel-fade .carousel-inner .active.right {
+  opacity: 0;
+}
+#hero-carousel .carousel-fade .carousel-inner .active,
+#hero-carousel .carousel-fade .carousel-inner .next.left,
+#hero-carousel .carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+#hero-carousel .carousel-fade .carousel-inner .next,
+#hero-carousel .carousel-fade .carousel-inner .prev,
+#hero-carousel .carousel-fade .carousel-inner .active.left,
+#hero-carousel .carousel-fade .carousel-inner .active.right {
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+#hero-carousel .carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+#hero-carousel .carousel,
+#hero-carousel .carousel-inner,
+#hero-carousel .carousel-inner .item {
+  height: 100%;
+}
+#hero-carousel .item:nth-child(1) {
+  background: #74C390;
+}
+#hero-carousel .item:nth-child(2) {
+  background: blue;
+}
+#hero-carousel .item:nth-child(3) {
+  background: #E46653;
+}

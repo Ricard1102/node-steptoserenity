@@ -73,6 +73,27 @@ h6 {
 }
 
 
+
+@media (min-width: 300px){
+  h1{
+    font-size: 60px;
+    height: 40px;
+  }
+}
+
+
+
+
+@media (min-width: 900px){
+  h1{
+    font-size: 80px;
+    height: 80px;
+  }
+}
+
+
+
+
 /* Prelaoder */
 #preloader {
   position: fixed;
@@ -145,11 +166,14 @@ h6 {
   height: 100vh;
   /*background: url(../img/medipedi.jpg) top center fixed;*/
   /* background:  url(../img/IMG_9641-min.JPG) top center fixed; */
-  background:  url(../img/sts4.jpg) top center fixed;
+  background:  url(../img/hero.png) top center fixed;
   background-size: cover;
   margin: 0;
 
 }
+
+
+
 
 @media (max-width: 600px)
 {
@@ -161,7 +185,7 @@ h6 {
     /*background: url(../img/medipedi.jpg) top center fixed;*/
     /*background:rgba(87, 0, 87, 0.9);*/
     /* background:  url(../img/IMG_9641-min.JPG) top center fixed; */
-    background:  url(../img/sts4.jpg)  top center fixed;
+    background:  url(../img/hero.png)  top center fixed;
    background-size: 1020px 1000px;
   }
 }
@@ -180,8 +204,10 @@ h6 {
   /* background: rgba(223, 37, 223, 0.322); THIS IS THE ORIGINAL ONE */
   /* background: rgba(204, 109, 198, 0.685); */
   /* background: rgba(168, 37, 185, 0.623); */
-  background: linear-gradient( rgba(0, 0, 0, 0.925), rgba(247, 159, 44, 0.623)) ;
+  background: linear-gradient( rgba(216, 214, 214, 0.4) , rgba(228, 160, 70, 0.623)) ;
   
+  /* */
+
   /* background: rgba(241, 227, 241, 0.3);*/
   /*background: rgba(171, 50, 241, 0.8);*/
   display: table-cell;
@@ -201,7 +227,7 @@ h6 {
 
 @media (max-width: 768px) {
   #hero h1 {
-    font-size: 28px;
+    font-size: 36px;
     line-height: 36px;
   }
 }
@@ -316,10 +342,12 @@ h6 {
 }
 
 .is-sticky #header {
-  background: #2c2c2c;
+  background: white;
+  
   opacity: 1;
   width: 100%;
   /* background: rgba(0, 0, 0, 0.85);*/
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.08);
 }
 
 /*--------------------------------------------------------------
@@ -406,7 +434,7 @@ h6 {
   padding: 10px 15px;
   text-decoration: none;
   display: inline-block;
-  color: #fff;
+  color:black;
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
   font-size: 14px;
@@ -462,7 +490,7 @@ h6 {
 }
 
 #mobile-nav-toggle i {
-  color: #fff;
+  color: rgb(82, 82, 82); /*burger icon color*/
 }
 
 @media (max-width: 768px) {
@@ -478,7 +506,9 @@ h6 {
   padding-top: 18px;
   bottom: 0;
   z-index: 998;
-  background: rgba(0, 0, 0, 0.61);/*rgba(0, 0, 0, 0.9);*/ /*small menu color*/
+  background: rgba(255, 255, 255, 0.9);
+  
+  /*rgba(0, 0, 0, 0.9);*/ /*small menu color*/
   left: -260px;
   width: 260px;
   overflow-y: auto;
@@ -496,7 +526,7 @@ h6 {
 }
 
 #mobile-nav ul li a {
-  color: #fff;
+  color: #333;
   font-size: 16px;
   overflow: hidden;
   padding: 10px 22px 10px 15px;
@@ -591,14 +621,17 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 80px 0;
 }
 
+#about li{
+  margin: 6px;
+}
 
 
 
 
 #about .about-img {
 
- background: url(../img/sts1.jpg) center center no-repeat;
-  background-size: 900px 1000px;
+ background: url(../img/IMG_9717.jpg) center center no-repeat;
+  background-size: 400px 340px;
   min-height: 300px;
   /*background-size: cover;*/
   border-radius: 3px;
@@ -613,16 +646,34 @@ body.mobile-nav-active #mobile-nav-toggle {
 
   #about .about-img {
 
-    background: url(../img/sts1.jpg) center center no-repeat;
-     min-height: 800px;
-     /* background-size: 900px 600px; */
-      background-size: cover;
+    background: url(../img/IMG_9692.jpg) center center no-repeat;
+     min-height: 380px;
+     /* max-width: 500px; */
+     background-size: 600px 500px;
+      /* background-size: cover; */
+     border-radius: 3px;
+     -webkit-box-shadow: 0px 4px 36px 7px rgba(0,0,0,0.2);
+     -moz-box-shadow: 0px 4px 36px 7px rgba(0,0,0,0.2);
+     box-shadow: 0px 4px 36px 7px rgba(0,0,0,0.2);
+     
+  }
+
+
+   #about .about-img-e {
+
+    background: url(../img/IMG_9645.jpg);
+    background-position: 0% 80%; 
+     min-height: 380px;
+     /* max-width: 500px; */
+     background-size: 600px 900px;
+      /* background-size: cover; */
      border-radius: 3px;
      -webkit-box-shadow: 0px 4px 36px 7px rgba(0,0,0,0.2);
      -moz-box-shadow: 0px 4px 36px 7px rgba(0,0,0,0.2);
      box-shadow: 0px 4px 36px 7px rgba(0,0,0,0.2);
      
    }
+  
 
   }
 
@@ -630,7 +681,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
   #about .about-img2 {
 
-    background: url(../img/sts8.jpg) center center no-repeat;
+    background: url(../img/IMG_9628.jpg) center center no-repeat;
      background-size: 400px 600px;
      min-height: 300px;
      /*background-size: cover;*/
@@ -646,7 +697,7 @@ body.mobile-nav-active #mobile-nav-toggle {
    
      #about .about-img2 {
    
-       background: url(../img/sts8.jpg) center center no-repeat;
+       background: url(../img/IMG_9628.jpg) center center no-repeat;
         min-height: 620px;
         /* background-size: 900px 600px; */
              background-size: cover;
@@ -718,7 +769,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: linear-gradient(
     rgba(255, 255, 255, 0.5),
       rgba(168, 168, 168, 0.7)  /* rgba(133, 27, 143, 0.3),
-      rgba(168, 168, 168, 0.7)*/), url(../img/sts4.jpg) fixed center center;
+      rgba(168, 168, 168, 0.7)*/), url(../img/IMG_9674.jpg) fixed center center;
   background-size: cover;
   padding: 80px 0 60px 0;
   width: 100%;
@@ -815,14 +866,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 14px;
   line-height: 24px;
  color: orange;
- margin: 0 0 2px 0;
+ margin: 4px 0 4px 0;
 }
 
 #services .price{
   font-size: 13px;
   line-height: 24px;
   color: #333;
-
+  margin: 4px 0 4px 0;
 }
 
 /* Subscribe Section
@@ -940,6 +991,21 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #f6f6f6;
   padding: 80px 0;
 }
+
+#testimonials blockquote{
+  font-size: 16px;
+}
+
+@media(max-width:600px){
+  #testimonials blockquote{
+    font-size: 12px;
+  }
+
+}
+
+
+
+
 
 
 #testimonials .profile {
@@ -1234,7 +1300,8 @@ vertical-align: middle;
   border: 2px solid #03c4eb;
   color: #fff;
   box-shadow: 0 0 0 0 #03c4eb;
-
+  margin: 2px 0;
+  min-width: 200px;
 }
 
 .btn-collapse:hover {
@@ -1260,3 +1327,23 @@ vertical-align: middle;
 @-moz-keyframes pulse {to {box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);}}
 @-ms-keyframes pulse {to {box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);}}
 @keyframes pulse {to {box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);}}
+
+
+
+/*--------------------------------------------------------------
+# Blockquote
+--------------------------------------------------------------*/
+
+blockquote{
+  text-align: justify;
+}
+
+
+select{
+  border: 1px solid rgba(165, 163, 163, 0.445);
+  color:grey;
+  border-radius: 0px;
+  min-width: 100%;
+  padding: 2px 0;
+  height: 32px;
+}

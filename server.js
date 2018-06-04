@@ -31,8 +31,8 @@ app.get('/', (req, res) => {
   res.render('home.hbs',
     {
       //Head.hbs variables
-      keywords: 'reflexology',
-      metaDescription: '',
+      keywords: 'reflexology, stress reflexology, reflexology Croydon, reflexologist Croydon, wellness reflexology',
+      metaDescription: 'Welcom to Step To Serenity. Amanda Lamboura is a reflexologist by the London School of Reflexology based in Croydon. Her gentle approach stimulates self healing for conditions such as asthma, irritable bowel syndrome, headaches and stress',
       pageTitle: 'Step to Serenity',
 
       //Header.hbs variables
@@ -49,14 +49,15 @@ app.get('/', (req, res) => {
 
       webmail: 'info@steptoserenity.com',
       twitter_url: '',
-      facebook_url: '',
+      facebook_url: 'https://www.facebook.com/steptoserenity/',
       googleplus_url: '',
       instagram_url: '',
       linkedin_url: '',
 
       //Maps
-      address: 'Croydon',
-      map_link: 'https://www.google.com/maps/place/Croydon/@51.3678229,-0.1172588,13z/data=!3m1!4b1!4m5!3m4!1s0x4875fe2a84421673:0xd574f25dc50c4945!8m2!3d51.376165!4d-0.098234',
+      address: '35 Lintree Grove Shirley, Croydon, London, United Kingdom, CR0 8AZ',
+      map_link: 'https://www.google.com/maps/place/35+Lime+Tree+Grove,+Croydon+CR0+8AZ/@51.369574,-0.0360564,17z/data=!3m1!4b1!4m5!3m4!1s0x48760042ea7de2ff:0xdd1840d151fa370e!8m2!3d51.3695707!4d-0.0338677',
+
 
       //Services variables
       cancellationPolicy1: 'Step to Serenity operates a cancellation policy. Our policy is similar to many other medical clinics and we ask all patients kindly to adhere to it.',
