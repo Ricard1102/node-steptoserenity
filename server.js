@@ -84,6 +84,7 @@ app.post('/send', (req, res) => {
     <li>Email: ${req.body.email}</li>
     <li>Phone: ${req.body.phone}</li>
     <li>Subject: ${req.body.subject}</li>
+    <li>Treatment: ${req.body.treatment}</li>
     <li>Message: ${req.body.message}</li>
     </ul>`;
 
