@@ -17,6 +17,7 @@ app.set('view engine', 'hbs');
 
 //STATIC FOLDER
 
+
 app.use('/public', express.static(path.join(__dirname + '/public')));
 
 //BODY PARSER MIDDLEWARE
@@ -25,6 +26,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // parse application/json
 app.use(bodyParser.json());
+
+app.get('/privacy', (req, res) => {
+  res.render('privacy.hbs', {
+    company: 'Step to Serenity',
+    phone: '+44 (0) 7533 777531',
+    mail: 'info@steptoserenity.com',
+    address: '35 Lintree Grove Shirley, Croydon, London, United Kingdom, CR0 8AZ'
+  });
+});
 
 
 app.get('/', (req, res) => {
@@ -55,7 +65,7 @@ app.get('/', (req, res) => {
       linkedin_url: '',
 
       //Maps
-      address: '35 Lintree Grove Shirley, Croydon, London, United Kingdom, CR0 8AZ',
+      address: '35 Lintree Grove Shirley, Croydon, CR0 8AZ, London. ',
       map_link: 'https://www.google.com/maps/place/35+Lime+Tree+Grove,+Croydon+CR0+8AZ/@51.369574,-0.0360564,17z/data=!3m1!4b1!4m5!3m4!1s0x48760042ea7de2ff:0xdd1840d151fa370e!8m2!3d51.3695707!4d-0.0338677',
 
 
@@ -86,6 +96,7 @@ app.post('/send', (req, res) => {
     <li>Subject: ${req.body.subject}</li>
     <li>Treatment: ${req.body.treatment}</li>
     <li>Message: ${req.body.message}</li>
+    <li>GDPR Consent: ${req.body.gdpr}</li>
     </ul>`;
 
   // create reusable transporter object using the default SMTP transport
