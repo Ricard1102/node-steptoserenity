@@ -59,7 +59,7 @@ app.get('/', (req, res) => {
       //Hero variables
       h1Title: 'Step to Serenity',
 
-      webmail: 'info@steptoserenity.com',
+      webmail: 'contact@steptoserenity.com',
       twitter_url: '',
       facebook_url: 'https://www.facebook.com/steptoserenity/',
       googleplus_url: '',
