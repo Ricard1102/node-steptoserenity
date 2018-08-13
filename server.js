@@ -33,7 +33,7 @@ app.get('/privacy', (req, res) => {
   res.render('privacy.hbs', {
     company: 'Step to Serenity',
     phone: '+44 (0) 7533 777531',
-    mail: 'info@steptoserenity.com',
+    mail: 'contact@steptoserenity.com',
     address: '35 Lime Tree Grove Shirley, Croydon, London, United Kingdom, CR0 8AZ'
   });
 });
@@ -44,7 +44,7 @@ app.get('/', (req, res) => {
     {
       //Head.hbs variables
       keywords: 'reflexology, stress reflexology, reflexology Croydon, reflexologist Croydon, wellness reflexology',
-      metaDescription: 'Welcom to Step To Serenity. Amanda Lamboura is a reflexologist by the London School of Reflexology based in Croydon. Her gentle approach stimulates self healing for conditions such as asthma, irritable bowel syndrome, headaches and stress',
+      metaDescription: 'Step To Serenity official site by reflexologist Amanda Lamboura (Croydon). Reflexology stimulates self-healing for stress, asthma, irritable bowel syndrome...',
       pageTitle: 'Step to Serenity',
 
       //Header.hbs variables
