@@ -34,7 +34,7 @@ app.get('/privacy', (req, res) => {
     company: 'Step to Serenity',
     phone: '+44 (0) 7533 777531',
     mail: 'contact@steptoserenity.com',
-    address: '35 Lime Tree Grove Shirley, Croydon, London, United Kingdom, CR0 8AZ'
+    address: '35 Lime Tree Grove Shirley, Croydon, CR0 8AZ'
   });
 });
 
