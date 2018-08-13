@@ -63,8 +63,8 @@ app.get('/', (req, res) => {
       twitter_url: '',
       facebook_url: 'https://www.facebook.com/steptoserenity/',
       googleplus_url: '',
-      instagram_url: '',
-      linkedin_url: '',
+      instagram_url: 'https://www.instagram.com/steptoserenity/',
+      linkedin_url: 'https://www.linkedin.com/in/amanda-lamboura-944999168/',
 
       //Maps
       address: '35 Lime Tree Grove Shirley, Croydon, CR0 8AZ',
