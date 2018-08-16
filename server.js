@@ -60,7 +60,7 @@ app.get('/', (req, res) => {
       h1Title: 'Step to Serenity',
 
       webmail: 'contact@steptoserenity.com',
-      twitter_url: '',
+      twitter_url: 'https://twitter.com/StepSerenity',
       facebook_url: 'https://www.facebook.com/steptoserenity/',
       googleplus_url: '',
       instagram_url: 'https://www.instagram.com/steptoserenity/',
