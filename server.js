@@ -107,6 +107,44 @@ app.get('/', (req, res) => {
 //     res.json({ "responseCode": 0, "responseDesc": "Sucess" });
 //   });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 app.post('/send', (req, res) => {
 
   if (req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null) {
@@ -116,7 +154,7 @@ app.post('/send', (req, res) => {
 
   }
   // Put your secret key here.
-  var secretKey = "6LcdWHYUAAAAAFkewfd17GHdL7oo-KMmF09WKhsG";
+  var secretKey = "6LfouqcUAAAAAMB9jlKvYxi1q-0evhwbI1SeBc6O";
   // req.connection.remoteAddress will provide IP address of connected user.
   var verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + secretKey + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
   // Hitting GET request to the URL, Google will respond with success or error scenario.
