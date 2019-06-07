@@ -92,9 +92,6 @@ app.post('/send', (req, res) => {
 
   if (req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null) {
     return res.json({ "responseCode": 1, "responseDesc": "Please select captcha" });
-
-
-
   }
   // Put your secret key here.
   var secretKey = "6LcdWHYUAAAAAFkewfd17GHdL7oo-KMmF09WKhsG";
@@ -106,13 +103,12 @@ app.post('/send', (req, res) => {
     // Success will be true or false depending upon captcha validation.
     if (body.success !== undefined && !body.success) {
       return res.json({ "responseCode": 1, "responseDesc": "Failed captcha verification" });
-
-
     }
-    // res.json({ "responseCode": 0, "responseDesc": "Sucess" });
-    res.render('partials/thanks', { businessName: 'Step to Serenity' });
+    res.json({ "responseCode": 0, "responseDesc": "Sucess" });
+  });
 
-    const output = `<p>You have a new contact request</p>
+
+  const output = `<p>You have a new contact request</p>
   <h3>Contact Details</h3>
   <ul>
     <li>Name: ${req.body.name}</li>
@@ -124,53 +120,53 @@ app.post('/send', (req, res) => {
     <li>GDPR Consent: ${req.body.gdpr}</li>
     </ul>`;
 
-    // create reusable transporter object using the default SMTP transport
-    let transporter = nodemailer.createTransport({
-      service: 'gmail',
-      host: 'smtp.google.com',
-      port: 25, //587
-      secure: false, // true for 465, false for other ports
-      auth: {
-        user: process.env.MAIL_USER, // generated ethereal user
-        pass: process.env.MAIL_PASS // generated ethereal password
-      },
-      tls: {
-        rejectUnauthorized: false
-      }
-    });
+  // create reusable transporter object using the default SMTP transport
+  let transporter = nodemailer.createTransport({
+    service: 'gmail',
+    host: 'smtp.google.com',
+    port: 25, //587
+    secure: false, // true for 465, false for other ports
+    auth: {
+      user: process.env.MAIL_USER, // generated ethereal user
+      pass: process.env.MAIL_PASS // generated ethereal password
+    },
+    tls: {
+      rejectUnauthorized: false
+    }
+  });
 
-    // setup email data with unicode symbols
-    let mailOptions = {
-      from: process.env.MAIL_FROM, // sender address
-      to: process.env.MAIL_TO, // list of receivers
-      subject: 'Contact request', // Subject line
-      text: 'Hello world', // plain text body
-      html: output // html body
-    };
+  // setup email data with unicode symbols
+  let mailOptions = {
+    from: process.env.MAIL_FROM, // sender address
+    to: process.env.MAIL_TO, // list of receivers
+    subject: 'Contact request', // Subject line
+    text: 'Hello world', // plain text body
+    html: output // html body
+  };
 
-    // send mail with defined transport object
-
-
-    transporter.sendMail(mailOptions, (error, info) => {
-
-      if (error) {
-        return console.log(error);
-      }
-      console.log('Message sent: %s', info.messageId);
-
-      console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-
-      res.render('partials/thanks', { businessName: 'Step to Serenity' });
+  // send mail with defined transport object
 
 
+  transporter.sendMail(mailOptions, (error, info) => {
 
-    });
+    if (error) {
+      return console.log(error);
+    }
+    console.log('Message sent: %s', info.messageId);
+
+    console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+
+    res.render('partials/thanks', { businessName: 'Step to Serenity' });
+
+
 
   });
 
-  app.listen(port, () => {
-    console.log(`Server is up on port ${port}`);
-  });
+});
+
+app.listen(port, () => {
+  console.log(`Server is up on port ${port}`);
+});
 
 
 
