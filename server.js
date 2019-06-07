@@ -6,6 +6,7 @@ const hbs = require('hbs');
 const nodemailer = require('nodemailer');
 const httpsRedirect = require('express-https-redirect');
 require('dotenv/config');
+var request = require('request');
 
 var app = express();
 
